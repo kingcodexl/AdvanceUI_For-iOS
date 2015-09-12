@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="s85-Az-PNi">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--主页-->
+        <scene sceneID="wPE-tS-dfd">
+            <objects>
+                <viewController title="主页" id="7Gs-Bx-2kV" customClass="CircleVCViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ifc-ht-7er"/>
+                        <viewControllerLayoutGuide type="bottom" id="pMu-Gp-tZE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OY7-uS-08m">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9gc-R0-aUD" customClass="CircleView">
+                                <rect key="frame" x="0.0" y="72" width="374" height="214"/>
+                                <color key="backgroundColor" red="1" green="0.95544077247114023" blue="0.71230035211548193" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="20" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="kfN-qN-l1k">
+                                <rect key="frame" x="56" y="381" width="279" height="31"/>
+                                <connections>
+                                    <action selector="sender:" destination="7Gs-Bx-2kV" eventType="valueChanged" id="FXa-7a-eWj"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="主页" image="setting_phone_icon" id="HJs-QG-SH5"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="circleView" destination="9gc-R0-aUD" id="aXS-Dk-E2j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ODs-Yc-utB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1290.5" y="291.5"/>
+        </scene>
+        <!--消息-->
+        <scene sceneID="1Ha-rb-DME">
+            <objects>
+                <viewController title="消息" id="U3W-TB-SLE" userLabel="消息" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dQx-wr-zsi"/>
+                        <viewControllerLayoutGuide type="bottom" id="ead-AY-7hk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fFt-63-uOc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.46387437120000002" green="1" blue="0.25138049600000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="消息" image="setting_birthday_icon" id="ELf-kg-4q8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gWj-iC-RfY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1641" y="-429"/>
+        </scene>
+        <!--个人-->
+        <scene sceneID="IU5-es-ZV4">
+            <objects>
+                <viewController title="个人" id="OWv-Mo-1Ku" userLabel="个人" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dUS-F6-OEZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="vIR-kl-EYO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0LA-1z-8JO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="个人" image="setting_mail_icon" badgeValue="4" id="NQw-QO-zyY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2sQ-po-wp5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1829" y="-1293"/>
+        </scene>
+        <!--主页-->
+        <scene sceneID="OMd-0v-Qda">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="s85-Az-PNi" userLabel="主页" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="AFn-Xi-tiE">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="7Gs-Bx-2kV" kind="relationship" relationship="viewControllers" id="StH-7I-rVT"/>
+                        <segue destination="U3W-TB-SLE" kind="relationship" relationship="viewControllers" id="ac6-5j-MX8"/>
+                        <segue destination="OWv-Mo-1Ku" kind="relationship" relationship="viewControllers" id="fID-Bs-WMp"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kiY-Y3-M1r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="242" y="-408"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="setting_birthday_icon" width="24" height="24"/>
+        <image name="setting_mail_icon" width="24" height="24"/>
+        <image name="setting_phone_icon" width="24" height="24"/>
+    </resources>
+</document>
