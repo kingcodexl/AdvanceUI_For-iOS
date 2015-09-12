@@ -28,6 +28,8 @@
     window.rootViewController = xibVC;
     self.window = window;
     
+    NSLog(@"GitHub_Test");
+    
     
     
     /*纯代码创建;注意控制器的view是延迟加载的，也就是用到的时候才加载
